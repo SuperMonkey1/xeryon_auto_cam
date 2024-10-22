@@ -5,7 +5,7 @@ import ast
 
 def main():
     # Specify your Excel file and template file here
-    excel_file = 'parameters.xlsx'     # Replace with your Excel file path
+    excel_file = 'parameters_top_plate_onder.xlsx'     # Replace with your Excel file path
     template_file = 'template_top_plate_onder.H'  # Replace with your template file path
     labels_folder = 'labels'           # Folder containing label files
     output_folder = 'generated_h_files'
