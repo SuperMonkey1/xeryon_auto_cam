@@ -8,7 +8,7 @@ open Terminal and run:
 1) python -m venv env  (this creates virtual environment)
 2) .\env\Scripts\activate (activates virtual environment)
 3) pip install -r requirements.txt (installs all the required packages)
-4) when adding requirements: pip freeze > requirements.txt (before sharing)
+(4) when adding requirements: pip freeze > requirements.txt (before sharing)
 
 
 
