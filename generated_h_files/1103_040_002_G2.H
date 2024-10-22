@@ -326,7 +326,6 @@
   L X+4.5 Y-3.5 Z+10 F MAX M99
   L X+7 Y-3.5 Z+10 F MAX M99
   
-  
   ;  
   ; #2.4 - BOREN M1.6 
   ;  
@@ -568,7 +567,6 @@
   L X+4.5 Y-3.5 Z+10 F MAX M99
   L X+7 Y-3.5 Z+10 F MAX M99
   
-  
   ;  
   ; #3.4 - AFSCHUINEN GATEN M1.6 
   ;  
@@ -699,28 +697,24 @@
   L Y+17.1 F200
   L Z-1.05 F50
   L Y+20 F200
+  
   L X-5 F500
   L Z-0.95 F1000
   L Y+17.1 F200
   L Z-1.05 F50
   L Y+20 F200
+  
   L X+5 F500
   L Z-0.95 F1000
   L Y+17.1 F200
   L Z-1.05 F50
   L Y+20 F200
+  
   L X+15 F500
   L Z-0.95 F1000
   L Y+17.1 F200
   L Z-1.05 F50
   L Y+20 F200
-  
-  
-  
-  
-  
-  
-  
   
   L Z+1 F1000
   L Z+10 F MAX
@@ -996,7 +990,6 @@
   L X+2 Y-3.5 Z+10 F MAX M99
   L X+4.5 Y-3.5 Z+10 F MAX M99
   L X+7 Y-3.5 Z+10 F MAX M99
-  
   
   ;  
   TCH PROBE 586 WT-BREUKCONTROLE ~
