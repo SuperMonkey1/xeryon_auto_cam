@@ -1,1 +1,17 @@
 env/
+
+# Environment variables
+.env
+
+# Docker-related files
+.docker/
+
+# Log files
+*.log
+
+# Build artifacts and temporary files
+/dist/
+/build/
+
+# Docker Compose override
+docker-compose.override.yml
