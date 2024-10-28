@@ -5,13 +5,13 @@ import ast
 
 
 ### PARAMETERS
-parameters_excel_file = 'parameters_XLS_3_top_plate_boven.xlsx'     # Replace with your Excel file path
-template_file = 'template_XLS_3_top_plate_boven.H'  # Replace with your template file path
+parameters_excel_file = 'parameters_xls_3_bottom_plate_onder.xlsx'     # Replace with your Excel file path
+template_file = 'template_xls_3_bottom_plate_onder.H'  # Replace with your template file path
 
 
 ### NO TOUCHY TOUCHY !
 def main():
-    labels_folder = 'labels'            # Folder containing label files
+    selections_folder = 'selections'            # Folder containing selections files
     output_folder = 'generated_h_files'
 
     # Create the output folder if it doesn't exist
@@ -124,7 +124,7 @@ def main():
         content = evaluate_expressions_in_content(content, param_dict)
 
         # Now, process SELECT_ placeholders
-        content = process_select_placeholders(content, param_dict, labels_folder)
+        content = process_select_placeholders(content, param_dict, selections_folder)
 
         # Write the output file
         try:
@@ -215,7 +215,7 @@ def replace_remaining_placeholders(match, local_param_dict):
     value = local_param_dict.get(placeholder, match.group(0))
     return str(value)
 
-def process_select_placeholders(content, param_dict, labels_folder):
+def process_select_placeholders(content, param_dict, selections_folder):
     pattern = r'\{(SELECT_[^\{\}]+)\}'
     def replace_select(match):
         select_param = match.group(1)
@@ -223,7 +223,7 @@ def process_select_placeholders(content, param_dict, labels_folder):
         if not filename:
             print(f"Warning: No value found for parameter '{select_param}'.")
             return match.group(0)  # Keep the placeholder unchanged
-        filepath = os.path.join(labels_folder, filename)
+        filepath = os.path.join(selections_folder, filename)
         try:
             with open(filepath, 'r') as f:
                 file_content = f.read()
