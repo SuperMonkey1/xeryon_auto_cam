@@ -3,11 +3,15 @@ import re
 import os
 import ast
 
+
+### PARAMETERS
+parameters_excel_file = 'parameters_XLS_3_top_plate_boven.xlsx'     # Replace with your Excel file path
+template_file = 'template_XLS_3_top_plate_boven.H'  # Replace with your template file path
+
+
+### NO TOUCHY TOUCHY !
 def main():
-    # Specify your Excel file and template file here
-    excel_file = 'parameters_top_plate_onder.xlsx'     # Replace with your Excel file path
-    template_file = 'template_top_plate_onder.H'  # Replace with your template file path
-    labels_folder = 'labels'           # Folder containing label files
+    labels_folder = 'labels'            # Folder containing label files
     output_folder = 'generated_h_files'
 
     # Create the output folder if it doesn't exist
@@ -16,7 +20,7 @@ def main():
 
     # Read Excel file into a DataFrame with all data as strings
     try:
-        df = pd.read_excel(excel_file, header=None, dtype=str)
+        df = pd.read_excel(parameters_excel_file, header=None, dtype=str)
     except Exception as e:
         print(f"Error reading Excel file: {e}")
         return
@@ -164,7 +168,7 @@ def process_for_blocks(content, param_dict):
                 local_param_dict[param_name] = value
                 # Process expressions and placeholders within the block
                 temp_content_evaluated = evaluate_expressions_in_content(temp_content, local_param_dict)
-                result += temp_content_evaluated
+                result += temp_content_evaluated + '\n'
             return result
         else:
             print(f"Warning: FOR_ parameter '{for_param}' is missing or not a list.")
