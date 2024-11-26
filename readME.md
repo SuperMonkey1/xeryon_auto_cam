@@ -1,6 +1,9 @@
 MADE BY Fré Leys
 VERSION: 0.1
 
+REMARKS
+- Bottom_plate_boven_nog dubbel checken met laatste files op machine
+
 How to run this code
 Copy Paste folder (fork)
 open folder in visual studio code

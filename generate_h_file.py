@@ -5,8 +5,8 @@ import ast
 
 
 ### PARAMETERS
-parameters_excel_file = 'parameters_xls_3_bottom_plate_onder.xlsx'     # Replace with your Excel file path
-template_file = 'template_xls_3_bottom_plate_onder.H'  # Replace with your template file path
+parameters_excel_file = 'parameters_xls_3_bottom_plate_boven.xlsx'     # Replace with your Excel file path
+template_file = 'template_xls_3_bottom_plate_boven.H'  # Replace with your template file path
 
 
 ### NO TOUCHY TOUCHY !
