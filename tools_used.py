@@ -5,6 +5,7 @@ import pandas as pd
 
 # Path to the subfolder containing the .H files
 folder_path = 'generated_h_files'
+output_file = 'tool_data.xlsx'
 
 # Get a list of all .H files in the subfolder
 file_paths = glob.glob(os.path.join(folder_path, '*.H'))
@@ -59,7 +60,6 @@ df = df.sort_values(by='Tool Number')
 df = df.reset_index(drop=True)
 
 # Save the DataFrame to an Excel file
-output_file = 'tool_data.xlsx'
 df.to_excel(output_file, index=False)
 
 print(f"Data has been successfully extracted, duplicates removed, sorted by tool number, and saved to '{output_file}'.")

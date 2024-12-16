@@ -1,0 +1,9 @@
+  BEGIN PGM FRE_SIMPEL MM
+
+    L X+10 Y+10
+    L X+10 Y-10
+    L X-10 Y-10
+    L X-10 Y+10
+    L X+10 Y+10
+
+  END PGM FRE_SIMPEL MM
